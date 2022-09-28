@@ -3,7 +3,7 @@ const Transaction = require('../entities/transaction')
 const BaseRepository = require('../repository/base/baseRepository')
 
 module.exports = class CarService {
-  constructor({ cars }) {
+  constructor({ cars } = {}) {
     this.carRepository = new BaseRepository({ file: cars })
     this.taxesBasedOnAge = Tax.taxesBasedOnAge
     this.currencyFormat = new Intl.NumberFormat('pt-br', {
@@ -25,6 +25,9 @@ module.exports = class CarService {
   }
 
   async getAvailableCar(carCategory) {
+    if (!this.carRepository) {
+      throw new Error('Missing dependency carRepository!')
+    }
     const carId = this.chooseRandomCar(carCategory)
     const car = await this.carRepository.find(carId)
 
@@ -42,6 +45,18 @@ module.exports = class CarService {
   }
 
   async rent(customer, carCategory, numberOfDays) {
+    if (!customer || !customer.id) {
+      throw new Error('Invalid customer.')
+    }
+
+    if (!carCategory || !carCategory.id) {
+      throw new Error('Invalid carCategory.')
+    }
+
+    if (numberOfDays < 0 || typeof numberOfDays !== 'number' ) {
+      throw new Error('Invalid numberOfDays.')
+    }
+    
     const car = await this.getAvailableCar(carCategory)
     const finalPrice = this.calculateFinalPrice(customer, carCategory, numberOfDays)
 

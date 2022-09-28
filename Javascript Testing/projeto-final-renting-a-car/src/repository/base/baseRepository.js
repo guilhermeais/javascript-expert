@@ -12,5 +12,6 @@ module.exports = class BaseRepository {
     }
 
     const item = content.find(({ id }) => id === itemId)
+    return item
   }
 }
