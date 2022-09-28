@@ -1,11 +1,11 @@
 [
   {
-    "id": "f5de76b8-e3dd-49ed-9ae5-e3c1bb0d3e16",
-    "name": "Sedan",
+    "id": "c3456667-efb2-4304-b7dd-f58aac8f146a",
+    "name": "SUV",
     "carIds": [
-      "3875719b-b957-42ff-a596-b3f8e497b533",
-      "91bf7772-710c-4e8c-ac17-73c2c662ec1e"
+      "71b9399e-71b6-4228-b020-82a31bf8cea9",
+      "95bda45f-887a-4ea2-a8ae-9d786a63e750"
     ],
-    "price": "40.57"
+    "price": 84.55
   }
 ]

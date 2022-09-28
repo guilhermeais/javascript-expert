@@ -1,16 +1,1 @@
-[
-  {
-    "id": "3875719b-b957-42ff-a596-b3f8e497b533",
-    "name": "2",
-    "releaseYear": 2021,
-    "available": true,
-    "gasAvailable": true
-  },
-  {
-    "id": "91bf7772-710c-4e8c-ac17-73c2c662ec1e",
-    "name": "Model Y",
-    "releaseYear": 2022,
-    "available": true,
-    "gasAvailable": true
-  }
-]
+[{"id":"71b9399e-71b6-4228-b020-82a31bf8cea9","name":"Explorer","releaseYear":2022,"available":true,"gasAvailable":true},{"id":"95bda45f-887a-4ea2-a8ae-9d786a63e750","name":"Element","releaseYear":2022,"available":true,"gasAvailable":true}]
