@@ -1,1 +1,11 @@
-[{"id":"f5de76b8-e3dd-49ed-9ae5-e3c1bb0d3e16","name":"Sedan","carIds":["3875719b-b957-42ff-a596-b3f8e497b533","91bf7772-710c-4e8c-ac17-73c2c662ec1e"],"price":"40.57"}]
+[
+  {
+    "id": "f5de76b8-e3dd-49ed-9ae5-e3c1bb0d3e16",
+    "name": "Sedan",
+    "carIds": [
+      "3875719b-b957-42ff-a596-b3f8e497b533",
+      "91bf7772-710c-4e8c-ac17-73c2c662ec1e"
+    ],
+    "price": "40.57"
+  }
+]
