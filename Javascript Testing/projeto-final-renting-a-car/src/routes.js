@@ -64,6 +64,24 @@ module.exports = class Routes {
     return res.end()
   }
 
+  async  getRequestData(req, res) {
+    return new Promise((resolve, reject) => {
+      const data = [];
+      req
+        .on("data", (chunk) => {
+          data.push(chunk);
+        })
+        .on("end", () => {
+          const dataDecoded = Buffer.concat(data).toString();
+          const parsedData = JSON.parse(dataDecoded);
+          resolve(parsedData);
+        })
+        .on("error", (error) => {
+          reject(error);
+        });
+    });
+  }
+
   async 'get:/cars'(req, res) {
     for await (const data of req) {
       try {

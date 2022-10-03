@@ -16,6 +16,9 @@
     "chalk-table": "^1.0.2",
     "draftlog": "^1.0.13"
   },
+  "engines": {
+    "node": ">=16"
+  },
   "devDependencies": {
     "nodemon": "^2.0.20"
   }
