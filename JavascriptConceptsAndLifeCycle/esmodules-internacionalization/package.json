@@ -5,8 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "npx nodemon --ignore database.json --experimental-specifier-resolution=node src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx mocha -w --parallel test/*.test.js",
+    "test:cov": "npx nyc npx mocha -r reify --parallel test/*.test.js",
+    "dev": "npx nodemon --ignore database.json --experimental-specifier-resolution=node src/index.js"
   },
   "keywords": [],
   "author": "",
@@ -14,12 +15,17 @@
   "dependencies": {
     "chalk": "^4.1.2",
     "chalk-table": "^1.0.2",
-    "draftlog": "^1.0.13"
+    "draftlog": "^1.0.13",
+    "reify": "^0.20.12"
   },
   "engines": {
     "node": ">=16"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "chai": "^4.3.6",
+    "mocha": "^8.4.0",
+    "nodemon": "^2.0.20",
+    "nyc": "^15.1.0",
+    "sinon": "^9.2.4"
   }
 }
