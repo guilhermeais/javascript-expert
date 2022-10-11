@@ -1,0 +1,50 @@
+123.123.123-14;
+321.564.257-96;
+301.454.367.19;
+
+Teixeira, Guilherme
+Pereira, Fernando
+Freire, Anderson
+
+-> replace de ^(\w+),\s(\w+)$
+-> por: {"firstName": "$2", "lastName": "$1"}
+-> temos:
+
+{"firstName": "Guilherme", "lastName": "Teixeira"}
+{"firstName": "Fernando", "lastName": "Pereira"}
+{"firstName": "Anderson", "lastName": "Freire"}
+
+
+O [Guilherme](https://github.com/guilhermeais) é um garoto cheio de sonhos, **ama a [Jesus](https://pt.wikipedia.org/wiki/Jesus)** e **ama programar**.
+Ele sonha em ser um ótimo programador e utilizar essa habilidade para impactar outras pessoas de uma maneira muito positiva!
+
+
+Ah! E ele também deseja ser um ótimo guitarrista um dia, tocando é claro, na casa do Senhor. 
+
+É isso :D!
+
+-> replace de \[(.*?)\]\(([http|https].*?\))
+-> por: <a href="$2" >$1</a>
+-> temos:
+
+
+O <a href="https://github.com/guilhermeais)" >Guilherme</a> é um garoto cheio de sonhos, **ama a <a href="https://pt.wikipedia.org/wiki/Jesus)" >Jesus</a>** e **ama programar**.
+Ele sonha em ser um ótimo programador e utilizar essa habilidade para impactar outras pessoas de uma maneira muito positiva!
+
+
+Ah! E ele também deseja ser um ótimo guitarrista um dia, tocando é claro, na casa do Senhor. 
+
+É isso :D!
+
+
+-> replace de \*{2}((?!\*{2}).*)\*{2}
+-> por: <b>$1<b/>`
+-> temos:
+
+O <a href="https://github.com/guilhermeais)" >Guilherme</a> é um garoto cheio de sonhos, <b>ama a <a href="https://pt.wikipedia.org/wiki/Jesus)" >Jesus</a><b> e <b/>ama programar<b/>.
+Ele sonha em ser um ótimo programador e utilizar essa habilidade para impactar outras pessoas de uma maneira muito positiva!
+
+
+Ah! E ele também deseja ser um ótimo guitarrista um dia, tocando é claro, na casa do Senhor. 
+
+É isso :D!
