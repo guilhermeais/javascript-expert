@@ -17,6 +17,7 @@
     "nyc": "^15.1.0"
   },
   "dependencies": {
-    "pdf-parse": "^1.1.1"
+    "pdf-parse": "^1.1.1",
+    "safe-regex": "^2.1.1"
   }
 }
