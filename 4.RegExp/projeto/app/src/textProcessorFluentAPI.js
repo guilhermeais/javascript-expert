@@ -1,6 +1,7 @@
 // O Objetivo do Fluent API é executar as tarefas como uma pipeline,
 // e no fim, chama o build, bem parecido com o padrão Builder.
 
+const Person = require('./person')
 const { evaluateRegex } = require('./utils')
 
 module.exports = class TextProcessorFluentAPI {
@@ -36,6 +37,11 @@ module.exports = class TextProcessorFluentAPI {
   divideTextInColumns() {
     const splitRegex = evaluateRegex(/,/g)
     this.#content = this.#content.map(content => content.split(splitRegex))
+    return this
+  }
+
+  mapPerson() {
+    this.#content = this.#content.map(person => Person.fromList(person))
     return this
   }
 
