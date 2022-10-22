@@ -1,0 +1,19 @@
+{
+  "name": "02.abstract-factory",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:console": "node ui/index.mjs",
+    "start:browser": "npx http-server ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "chalk-table": "^1.0.2",
+    "http-server": "^14.1.1"
+  }
+}
