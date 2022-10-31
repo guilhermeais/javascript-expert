@@ -1,4 +1,4 @@
-import { NotImplementedException } from '../../util/exceptions';
+import { NotImplementedException } from '../../util/exceptions.js';
 
 export default class BaseBusiness {
   _validateRequiredFields(data) {
