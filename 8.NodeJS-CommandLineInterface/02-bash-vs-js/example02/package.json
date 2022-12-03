@@ -1,0 +1,15 @@
+{
+  "name": "example02",
+  "version": "1.0.0",
+  "main": "index.mjs",
+  "scripts": {
+    "start": "npx zs index.mjs"
+  },
+  "keywords": [],
+  "author": "guilhermeais",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "zx": "^7.1.1"
+  }
+}
