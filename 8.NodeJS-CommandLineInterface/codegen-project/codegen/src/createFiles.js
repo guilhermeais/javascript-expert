@@ -5,10 +5,10 @@ import Util from './util.js'
 function getDependenciesByLayer({ layer, componentName } = {}) {
   const safeComponentName = Util.lowerCaseFirstLetter(componentName)
   const dependencies = {
-    serviceTemplate: {
+    service: {
       repositoryName: `${safeComponentName}Repository`,
     },
-    factoryTemplate: {
+    factory: {
       repositoryName: `${safeComponentName}Repository`,
       serviceName: `${safeComponentName}Service`,
     },
@@ -26,7 +26,7 @@ export async function createFiles({
   const templatesNames = Object.keys(templates)
   const pendingFilesToWrite = []
   for (const layer of layers) {
-    const chosenTemplate = templatesNames.find(template => template === layer)
+    const chosenTemplate = templatesNames.find(template => template === `${layer}Template`)
 
     if (!chosenTemplate) {
       return {

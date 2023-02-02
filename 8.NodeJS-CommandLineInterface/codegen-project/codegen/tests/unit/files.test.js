@@ -12,9 +12,9 @@ import templates from '../../src/templates/index.js';
 
 describe('#Layers - Files Structure', () => {
   const defaultLayers = [
-    'serviceTemplate',
-    'factoryTemplate',
-    'repositoryTemplate',
+    'service',
+    'factory',
+    'repository',
   ]
 
   let config = {
@@ -61,7 +61,7 @@ describe('#Layers - Files Structure', () => {
 
     const specificConfig = {
       ...config,
-      layers: ['repositoryTemplate'],
+      layers: ['repository'],
     }
 
     const expected =  {
@@ -89,7 +89,7 @@ describe('#Layers - Files Structure', () => {
 
     const specificConfig = {
       ...config,
-      layers: ['repositoryTemplate', 'serviceTemplate'],
+      layers: ['repository', 'service'],
     }
 
     const expected =  {

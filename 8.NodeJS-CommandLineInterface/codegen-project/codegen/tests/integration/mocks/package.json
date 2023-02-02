@@ -1,0 +1,10 @@
+{
+  "name": "@guilhermeais/codegen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "keywords": [],
+  "author": "guilhermeais",
+  "license": "ISC"
+}
