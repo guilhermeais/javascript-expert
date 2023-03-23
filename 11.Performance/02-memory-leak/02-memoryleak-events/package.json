@@ -1,0 +1,24 @@
+{
+  "name": "02-memory-leak",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "CLIMEM=8999 node -r climem index.js",
+    "climem": "npx climem 8999",
+    "test": "npx autocannon -c 100 -d 30 -p 10 http://localhost:3000",
+    "flame-0x": "npx 0x -- node index.js",
+    "clinic:doctor": "npx clinic doctor -- node index.js",
+    "clinic:flame": "npx clinic flame -- node index.js",
+    "clinic:heapprofile": "npx clinic heapprofile -- node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "0x": "^5.5.0",
+    "autocannon": "^7.10.0",
+    "climem": "^1.0.3"
+  }
+}
